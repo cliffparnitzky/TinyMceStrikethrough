@@ -1,0 +1,35 @@
+{
+	"name":"cliffparnitzky/tiny-mce-strikethrough",
+	"description":"Special TinyMCE plugin to add strikethrough support.",
+	"keywords":["contao","tinymce","tiny editor","tinymce plugin","strikethrough"],
+	"type":"contao-module",
+	"license":"LGPL-3.0+",
+	"authors":[
+		{
+			"name":"Cliff Parnitzky",
+			"email":"contao@cliff-parnitzky.de",
+			"role":"Developer"
+		}
+	],
+	"support":{
+		"email":"contao@cliff-parnitzky.de",
+		"issues":"https://github.com/cliffparnitzky/TinyMceStrikethrough/issues",
+		"source":"https://github.com/cliffparnitzky/TinyMceStrikethrough"
+	},
+	"require":{
+		"php":">=5.3",
+		"contao/core":">=2.9.5,<3.3.0",
+		"contao-community-alliance/composer-installer":"*",
+		"cliffparnitzky/tiny-mce-plugin-loader":">=1.0.0,<2.0.x-dev"
+	},
+	"extra":{
+		"contao":{
+			"sources":{
+				"system/modules/TinyMceStrikethrough":"system/modules/TinyMceStrikethrough"
+			}
+		},
+		"branch-alias": {
+			"dev-master": "1.0.x-dev"
+		}
+	}
+}
