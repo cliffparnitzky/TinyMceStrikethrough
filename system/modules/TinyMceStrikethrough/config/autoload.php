@@ -3,7 +3,7 @@
 /**
  * Contao Open Source CMS
  *
- * Copyright (c) 2005-2014 Leo Feyer
+ * Copyright (c) 2005-2015 Leo Feyer
  *
  * @package TinyMceStrikethrough
  * @link    https://contao.org
@@ -12,9 +12,19 @@
 
 
 /**
+ * Register the namespaces
+ */
+ClassLoader::addNamespaces(array
+(
+	'TinyMceStrikethrough',
+));
+
+
+/**
  * Register the classes
  */
 ClassLoader::addClasses(array
 (
-	'TinyMceStrikethrough' => 'system/modules/TinyMceStrikethrough/TinyMceStrikethrough.php',
+	// Classes
+	'TinyMceStrikethrough\TinyMceStrikethrough' => 'system/modules/TinyMceStrikethrough/classes/TinyMceStrikethrough.php',
 ));

@@ -1,5 +1,9 @@
+[![Latest Version on Packagist](http://img.shields.io/packagist/v/cliffparnitzky/tiny-mce-strikethrough.svg?style=flat)](https://packagist.org/packages/cliffparnitzky/tiny-mce-strikethrough)
+[![Installations via composer per month](http://img.shields.io/packagist/dm/cliffparnitzky/tiny-mce-strikethrough.svg?style=flat)](https://packagist.org/packages/cliffparnitzky/tiny-mce-strikethrough)
+[![Installations via composer total](http://img.shields.io/packagist/dt/cliffparnitzky/tiny-mce-strikethrough.svg?style=flat)](https://packagist.org/packages/cliffparnitzky/tiny-mce-strikethrough)
+
 Contao Extension: TinyMceStrikethrough
-=====================================
+======================================
 
 Special TinyMCE plugin to add strikethrough support.
 
@@ -7,8 +11,9 @@ Special TinyMCE plugin to add strikethrough support.
 Installation
 ------------
 
-The extension is not published in contao extension repository.
-Install it manually or via [composer](https://packagist.org/packages/cliffparnitzky/tiny-mce-strikethrough).
+Install the extension via composer: [cliffparnitzky/tiny-mce-strikethrough](https://packagist.org/packages/cliffparnitzky/tiny-mce-strikethrough).
+
+If you prefer to install it manually, download the latest release here: https://github.com/cliffparnitzky/TinyMceStrikethrough/releases
 
 
 Tracker
@@ -20,8 +25,8 @@ https://github.com/cliffparnitzky/TinyMceStrikethrough/issues
 Compatibility
 -------------
 
-- min. version: Contao 3.0.x
-- max. version: Contao 3.2.x
+- min. Contao version: >= 3.3.0
+- max. Contao version: <  3.5.0
 
 
 Dependency
@@ -33,4 +38,4 @@ Dependency
 Screenshot
 ----------
 
-![Screenshot](https://raw.github.com/cliffparnitzky/TinyMceStrikethrough/master/screenshot.jpg)
+![Screenshot](screenshot.jpg)

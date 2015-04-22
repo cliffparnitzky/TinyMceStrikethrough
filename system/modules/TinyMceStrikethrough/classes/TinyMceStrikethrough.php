@@ -1,8 +1,8 @@
-<?php if (!defined('TL_ROOT')) die('You cannot access this file directly!');
+<?php
 
 /**
  * Contao Open Source CMS
- * Copyright (C) 2005-2014 Leo Feyer
+ * Copyright (C) 2005-2015 Leo Feyer
  *
  * Formerly known as TYPOlight Open Source CMS.
  *
@@ -21,40 +21,43 @@
  * Software Foundation website at <http://www.gnu.org/licenses/>.
  *
  * PHP version 5
- * @copyright  Cliff Parnitzky 2014
+ * @copyright  Cliff Parnitzky 2014-2015
  * @author     Cliff Parnitzky
  * @package    TinyMceStrikethrough
  * @license    LGPL
  */
 
 /**
+ * Run in a custom namespace, so the class can be replaced
+ */
+namespace TinyMceStrikethrough;
+
+/**
 * Class TinyMceStrikethrough
 *
 * Class to implement the HOOK for adding configs.
-* @copyright  Cliff Parnitzky 2014
+* @copyright  Cliff Parnitzky 2014-2015
 * @author     Cliff Parnitzky
 */
 class TinyMceStrikethrough {
+	
+	const BUTTON                 = "strikethrough";
+	const BUTTON_TO_INSERT_AFTER = "italic";
 	
 	/**
 	 * Adding config for output behavoir
 	 */
 	public function editTinyMcePluginLoaderConfig ($arrTinyConfig) {
-		$arrButtonBars = array("theme_advanced_buttons1", "theme_advanced_buttons2", "theme_advanced_buttons3");
+		$arrButtonBars = array("toolbar1", "toolbar2", "toolbar3");
 		
 		foreach ($arrButtonBars as $strButtonBar)
 		{
-			$arrTinyConfig[$strButtonBar] = $this->addStrikethroughAfterUnderline($arrTinyConfig[$strButtonBar]);
+			if (strpos($arrTinyConfig[$strButtonBar], static::BUTTON_TO_INSERT_AFTER) !== FALSE)
+			{
+				$arrTinyConfig[$strButtonBar] = str_replace(static::BUTTON_TO_INSERT_AFTER, static::BUTTON_TO_INSERT_AFTER . " " . static::BUTTON, $arrTinyConfig[$strButtonBar]);
+			}
 		}
 		return $arrTinyConfig;
-	}
-	
-	/**
-	 * Adds the config to the buttons, if 'underline' was found.
-	 */
-	private function addStrikethroughAfterUnderline($strButtons)
-	{
-		return str_replace(",underline,", ",underline,strikethrough,", $strButtons);
 	}
 }
  
